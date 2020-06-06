@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuDespegable"
+    android:background="#E4E3E3">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tabla">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:text="HOLA"
+            android:id="@+id/nameApp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tabla"
+            />
+
+        <ImageView
+            android:src="@color/colorAccent"
+            android:layout_width="45dp"
+            android:layout_height="47dp"
+            android:id="@+id/app"
+            app:layout_constraintTop_toTopOf="@id/tabla"
+            app:layout_constraintStart_toStartOf="@id/tabla"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardViewInstal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabla"
+        android:background="@drawable/shape_expandable">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/descInstal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Instalación y configuración"
+                android:textColor="@android:color/black"
+                android:textSize="25dp"
+                android:layout_marginStart="20px"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="20dp" />
+
+            <Button
+                android:id="@+id/arrowBtnInstal"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/ic_menu_gallery"
+                app:layout_constraintBottom_toBottomOf="@id/CardViewInstal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/CardViewInstal" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/expandableViewInstal"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descInstal">
+
+                <Button
+                    android:id="@+id/btnInstal"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="50px"
+                    android:background="@android:color/white"
+                    android:text="1. Instalación"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="20dp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btnConfig"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="50px"
+                    android:background="@android:color/white"
+                    android:text="2. Configuración"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/btnInstal" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardViewFun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CardViewInstal"
+        android:background="@drawable/shape_expandable">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/descFun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Funcionalidades"
+                android:textColor="@android:color/black"
+                android:textSize="25dp"
+                android:layout_marginStart="20px"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="20dp" />
+
+            <Button
+                android:id="@+id/arrowFun"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/ic_menu_gallery"
+                app:layout_constraintBottom_toBottomOf="@id/CardViewFun"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/CardViewFun" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/expandableViewFun"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descFun">
+
+                <Button
+                    android:id="@+id/btnFunci"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@android:color/white"
+                    android:text="1. Videollamada"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:layout_marginStart="50px"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="20dp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardViewAdver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CardViewFun"
+        android:background="@drawable/shape_expandable">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/descAdver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Advertencias"
+                android:textColor="@android:color/black"
+                android:textSize="25dp"
+                android:layout_marginStart="20px"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="20dp" />
+
+            <Button
+                android:id="@+id/arrowAdver"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/ic_menu_gallery"
+                app:layout_constraintBottom_toBottomOf="@id/CardViewFun"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/CardViewFun" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/expandableViewAdver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descAdver">
+
+                <Button
+                    android:id="@+id/btnAdver"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@android:color/white"
+                    android:text="1. Cuidao"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:layout_marginStart="50px"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:textSize="20dp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

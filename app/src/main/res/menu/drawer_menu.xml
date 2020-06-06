@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+    <item android:title="title"
+
+        >
+        <group android:checkableBehavior="single">
+            <item
+
+                android:id="@+id/nav_menu"
+                android:icon="@drawable/categorias"
+                android:title="Categorias" />
+            <item
+
+                android:id="@+id/nav_Bot"
+                android:icon="@drawable/bot"
+                android:title="ChatBot" />
+            <item
+                android:id="@+id/nav_Foro"
+                android:icon="@drawable/foro"
+                android:title="Foro" />
+        </group>
+
+    </item>
+
+    <item android:title="Ajustes"
+       android:id="@+id/ajustess">
+
+        <menu>
+
+
+            <item
+                android:id="@+id/nav_perfil"
+                android:icon="@drawable/ajustes_perfil"
+                android:title="Perfil" />
+
+            <item
+                android:id="@+id/dark_mode_switch"
+                android:icon="@drawable/dark"
+                android:title="Modo oscuro"
+                app:actionLayout="@layout/switch_item"
+                app:showAsAction="always" />
+
+        </menu>
+    </item>
+    <item android:title="Saber mas">
+
+        <menu>
+
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/share"
+                android:title="Share" />
+            <item
+
+                android:icon="@drawable/ic_menu_camera"
+                android:title="¿Quienes somos?" />
+
+
+        </menu>
+    </item>
+
+
+</menu>
